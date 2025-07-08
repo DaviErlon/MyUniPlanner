@@ -3,380 +3,320 @@
     {
       "id": 1,
       "nome": "Cálculo I",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 2,
       "nome": "Geometria Analítica",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 3,
       "nome": "Humanidade e Cidadania",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 4,
       "nome": "Química Teórica",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 5,
       "nome": "Química Prática",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 6,
       "nome": "Metodologia e Expr. Técnica e Científica",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 7,
       "nome": "Introdução a Engenharia de Produção",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     }
   ],
   [
     {
       "id": 8,
       "nome": "Cálculo II",
-      "preReq": [1],
-      "clicado": false
+      "preReq": [1]
     },
     {
       "id": 9,
       "nome": "Álgebra Linear",
-      "preReq": [2],
-      "clicado": false
+      "preReq": [2]
     },
     {
       "id": 10,
       "nome": "Física Teórica I",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 11,
       "nome": "Desenho Técnico",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 12,
       "nome": "Economia",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 13,
       "nome": "Evolução das Técnicas de Gestão",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 14,
       "nome": "Ética e Exercício Profissional",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     }
   ],
   [
     {
       "id": 15,
       "nome": "Cálculo III",
-      "preReq": [8],
-      "clicado": false
+      "preReq": [8]
     },
     {
       "id": 16,
       "nome": "Introdução a Ciência dos Materiais",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 17,
       "nome": "Física Teórica II",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 18,
       "nome": "Algoritmo e Programação",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 19,
       "nome": "Estatística Básica",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 20,
       "nome": "Custos Industriais",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     }
   ],
   [
     {
       "id": 21,
       "nome": "Fenômenos de Transporte",
-      "preReq": [15, 17],
-      "clicado": false
+      "preReq": [15, 17]
     },
     {
       "id": 22,
       "nome": "Física Experimental A",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 23,
       "nome": "Mecânica dos Sólidos",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 24,
       "nome": "Cálculo Numérico",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 25,
       "nome": "Engenharia Financeira",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 26,
       "nome": "Estatística Para Engenharia de Produção",
-      "preReq": [19],
-      "clicado": false
+      "preReq": [19]
     }
   ],
   [
     {
       "id": 27,
       "nome": "Física Teórica III",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 28,
       "nome": "Resistência dos Materiais",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 29,
       "nome": "Pesquisa Operacional I",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 30,
       "nome": "Engenharia de Métodos",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 31,
       "nome": "Segurança do Trabalho",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 32,
       "nome": "Análise de Investimentos",
-      "preReq": [26],
-      "clicado": false
+      "preReq": [26]
     },
     {
       "id": 33,
       "nome": "Eletiva I",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     }
   ],
   [
     {
       "id": 34,
       "nome": "Eletrotécnica",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 35,
       "nome": "Logística",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 36,
       "nome": "Planejamento e Controle da Produção I",
-      "preReq": [19],
-      "clicado": false
+      "preReq": [19]
     },
     {
       "id": 37,
       "nome": "Gestão da Qualidade",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 38,
       "nome": "Ergonomia",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 39,
       "nome": "Pesquisa Operacional II",
-      "preReq": [29],
-      "clicado": false
+      "preReq": [29]
     },
     {
       "id": 40,
       "nome": "Optativa I",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     }
   ],
   [
     {
       "id": 41,
       "nome": "Planejamento e Controle da Produção II",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 42,
       "nome": "Gestão Ambiental",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 43,
       "nome": "Engenharia do Produto",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 44,
       "nome": "Simulação de Processos Produtivos",
-      "preReq": [18],
-      "clicado": false
+      "preReq": [18]
     },
     {
       "id": 45,
       "nome": "Logística de Suprimentos",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 46,
       "nome": "Optativa II",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     }
   ],
   [
     {
       "id": 47,
       "nome": "Processos Industriais",
-      "preReq": [4, 5],
-      "clicado": false
+      "preReq": [4, 5]
     },
     {
       "id": 48,
       "nome": "Avaliação do Desempenho Organizacional",
-      "preReq": [26],
-      "clicado": false
+      "preReq": [26]
     },
     {
       "id": 49,
       "nome": "Projeto de Fábrica",
-      "preReq": [11, 36],
-      "clicado": false
+      "preReq": [11, 36]
     },
     {
       "id": 50,
       "nome": "Gestão de Serviços",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 51,
       "nome": "Eletiva II",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 52,
       "nome": "Logística de Distribuição",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     }
   ],
   [
     {
       "id": 53,
       "nome": "Inovação e Informação",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 54,
       "nome": "Controle Estatístico de Qualidade",
-      "preReq": [26],
-      "clicado": false
+      "preReq": [26]
     },
     {
       "id": 55,
       "nome": "Gestão de Projetos",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 56,
       "nome": "Empreendedorismo",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 57,
       "nome": "Projeto de TCC",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 58,
       "nome": "Núcleo Temático",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     }
   ],
   [
     {
       "id": 59,
       "nome": "Trabalho de Conclusão de Curso (TCC)",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     },
     {
       "id": 60,
       "nome": "Estágio Curricular",
-      "preReq": null,
-      "clicado": false
+      "preReq": null
     }
   ]
 ]
