@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:window_manager/window_manager.dart';
+void main() async {
 
-void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  await windowManager.ensureInitialized();
+
   runApp(const MyApp());
 }
 

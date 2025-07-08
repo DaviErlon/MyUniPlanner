@@ -1,5 +1,5 @@
-import 'package:flutter/services.dart';
+import 'package:window_manager/window_manager.dart';
 
-void closeProgram() {
-  SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+void closeProgram() async {
+  await windowManager.close();
 }

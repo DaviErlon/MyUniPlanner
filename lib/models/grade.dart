@@ -2,7 +2,9 @@ class Grade {
 
   String curso;
   List<dynamic> dados;
-  final int _qntPeriodos;
+  final int qntPeriodos;
 
-  Grade(this.curso, this.dados) : _qntPeriodos = dados.length;
+  Grade(this.curso, this.dados) : qntPeriodos = dados.length;
+
+  
 }

@@ -7,13 +7,13 @@ String _searchFile(String curso){
   
   String retorno = 'assets/data/';
   switch(curso){
-    case 'cc':
+    case 'CC':
       retorno += 'grcc.json';
       break;
-    case 'engp':
+    case 'ENGP':
       retorno += 'grengp.json';
       break;
-    case 'ncc':
+    case 'NCC':
       retorno += 'grncc.json';
       break;
     default:
@@ -24,6 +24,7 @@ String _searchFile(String curso){
   return retorno;
 }
 
+//metodo assincrono pois ler arquivos é uma função bloqueante
 Future<Grade> readData({required String curso}) async {
 
     String jsonString = await rootBundle.loadString(_searchFile(curso));
