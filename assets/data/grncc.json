@@ -1,0 +1,294 @@
+[
+  [
+    {
+      "id": 1,
+      "nome": "Programação Imperativa",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 2,
+      "nome": "Fundamentos da Lógica Matemática",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 3,
+      "nome": "Introdução à Ciência da Computação",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 4,
+      "nome": "Matemática Elementar",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 5,
+      "nome": "Metodologia Científica",
+      "preReq": null,
+      "clicado": false
+    }
+  ],
+  [
+    {
+      "id": 6,
+      "nome": "Algoritmos e Estruturas de Dados",
+      "preReq": [1],
+      "clicado": false
+    },
+    {
+      "id": 7,
+      "nome": "Programação Orientada a Objetos",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 8,
+      "nome": "Geometria Analítica e Vetores",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 9,
+      "nome": "Cálculo I",
+      "preReq": [4],
+      "clicado": false
+    },
+    {
+      "id": 10,
+      "nome": "Sistemas de Informação",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 11,
+      "nome": "Desenvolvimento de Software I",
+      "preReq": null,
+      "clicado": false
+    }
+  ],
+  [
+    {
+      "id": 12,
+      "nome": "Sistemas Operacionais",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 13,
+      "nome": "Redes de Computadores",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 14,
+      "nome": "Banco de Dados",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 15,
+      "nome": "Cálculo II",
+      "preReq": [9],
+      "clicado": false
+    },
+    {
+      "id": 16,
+      "nome": "Administração",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 17,
+      "nome": "Desenvolvimento de Software II",
+      "preReq": null,
+      "clicado": false
+    }
+  ],
+  [
+    {
+      "id": 18,
+      "nome": "Arquitetura de Computadores",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 19,
+      "nome": "Sistemas Distribuídos",
+      "preReq": [12, 13],
+      "clicado": false
+    },
+    {
+      "id": 20,
+      "nome": "Computação Inteligente",
+      "preReq": [6],
+      "clicado": false
+    },
+    {
+      "id": 21,
+      "nome": "Álgebra Linear",
+      "preReq": [9],
+      "clicado": false
+    },
+    {
+      "id": 22,
+      "nome": "Engenharia de Software",
+      "preReq": [7],
+      "clicado": false
+    },
+    {
+      "id": 23,
+      "nome": "Desenvolvimento de Software III",
+      "preReq": null,
+      "clicado": false
+    }
+  ],
+  [
+    {
+      "id": 24,
+      "nome": "Linguagens Formais, Autômatos",
+      "preReq": [2],
+      "clicado": false
+    },
+    {
+      "id": 25,
+      "nome": "Análise de Algoritmos",
+      "preReq": [6, 2],
+      "clicado": false
+    },
+    {
+      "id": 26,
+      "nome": "Mecânica Clássica",
+      "preReq": [8, 9, 15],
+      "clicado": false
+    },
+    {
+      "id": 27,
+      "nome": "Estatística Básica",
+      "preReq": [4, 9],
+      "clicado": false
+    },
+    {
+      "id": 28,
+      "nome": "Empreendedorismo",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 29,
+      "nome": "Desenvolvimento de Software IV",
+      "preReq": null,
+      "clicado": false
+    }
+  ],
+  [
+    {
+      "id": 30,
+      "nome": "Computabilidade e Decidibilidade",
+      "preReq": [24],
+      "clicado": false
+    },
+    {
+      "id": 31,
+      "nome": "Construção de Compiladores",
+      "preReq": [24],
+      "clicado": false
+    },
+    {
+      "id": 32,
+      "nome": "Aprendizado de Máquina",
+      "preReq": [20, 27],
+      "clicado": false
+    },
+    {
+      "id": 33,
+      "nome": "Eletromagnetismo Clássico",
+      "preReq": [26],
+      "clicado": false
+    },
+    {
+      "id": 34,
+      "nome": "Auditoria e Segurança de Dados",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 35,
+      "nome": "Desenvolvimento de Software V",
+      "preReq": null,
+      "clicado": false
+    }
+  ],
+  [
+    {
+      "id": 36,
+      "nome": "Interação Humano Computador",
+      "preReq": [22],
+      "clicado": false
+    },
+    {
+      "id": 37,
+      "nome": "Núcleo Temático",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 38,
+      "nome": "Desenvolvimento de Software VI",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 39,
+      "nome": "Optativa I",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 40,
+      "nome": "Optativa II",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 41,
+      "nome": "Eletiva I",
+      "preReq": null,
+      "clicado": false
+    }
+  ],
+  [
+    {
+      "id": 42,
+      "nome": "Trabalho de Conclusão de Curso",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 43,
+      "nome": "Optativa III",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 44,
+      "nome": "Optativa IV",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 45,
+      "nome": "Eletiva II",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 46,
+      "nome": "Atividades Complementares",
+      "preReq": null,
+      "clicado": false
+    }
+  ]
+]

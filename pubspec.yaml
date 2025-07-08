@@ -1,0 +1,38 @@
+name: myuniplanner
+description: "Um novo projeto Flutter."
+
+# Evita que o pacote seja publicado por engano no pub.dev.
+publish_to: 'none'
+
+# Versão do app: versão principal . secundária . correção + número de build.
+version: 1.0.0+1
+
+# Define a versão mínima do Dart SDK necessária.
+environment:
+  sdk: ^3.8.1
+
+# Dependências necessárias para rodar o app.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Ícones no estilo iOS (opcional)
+  cupertino_icons: ^1.0.8
+
+# Dependências usadas apenas para desenvolvimento e testes.
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Regras de boas práticas de código.
+  flutter_lints: ^5.0.0
+
+# Configurações específicas do Flutter.
+flutter:
+
+  # Garante que os ícones do Material Design sejam incluídos.
+  uses-material-design: true
+
+  # Adiciona os arquivos de assets (imagens, JSON, etc.)
+  assets:
+    - assets/data/

@@ -1,0 +1,382 @@
+[
+  [
+    {
+      "id": 1,
+      "nome": "Cálculo I",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 2,
+      "nome": "Geometria Analítica",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 3,
+      "nome": "Humanidade e Cidadania",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 4,
+      "nome": "Química Teórica",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 5,
+      "nome": "Química Prática",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 6,
+      "nome": "Metodologia e Expr. Técnica e Científica",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 7,
+      "nome": "Introdução a Engenharia de Produção",
+      "preReq": null,
+      "clicado": false
+    }
+  ],
+  [
+    {
+      "id": 8,
+      "nome": "Cálculo II",
+      "preReq": [1],
+      "clicado": false
+    },
+    {
+      "id": 9,
+      "nome": "Álgebra Linear",
+      "preReq": [2],
+      "clicado": false
+    },
+    {
+      "id": 10,
+      "nome": "Física Teórica I",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 11,
+      "nome": "Desenho Técnico",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 12,
+      "nome": "Economia",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 13,
+      "nome": "Evolução das Técnicas de Gestão",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 14,
+      "nome": "Ética e Exercício Profissional",
+      "preReq": null,
+      "clicado": false
+    }
+  ],
+  [
+    {
+      "id": 15,
+      "nome": "Cálculo III",
+      "preReq": [8],
+      "clicado": false
+    },
+    {
+      "id": 16,
+      "nome": "Introdução a Ciência dos Materiais",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 17,
+      "nome": "Física Teórica II",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 18,
+      "nome": "Algoritmo e Programação",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 19,
+      "nome": "Estatística Básica",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 20,
+      "nome": "Custos Industriais",
+      "preReq": null,
+      "clicado": false
+    }
+  ],
+  [
+    {
+      "id": 21,
+      "nome": "Fenômenos de Transporte",
+      "preReq": [15, 17],
+      "clicado": false
+    },
+    {
+      "id": 22,
+      "nome": "Física Experimental A",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 23,
+      "nome": "Mecânica dos Sólidos",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 24,
+      "nome": "Cálculo Numérico",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 25,
+      "nome": "Engenharia Financeira",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 26,
+      "nome": "Estatística Para Engenharia de Produção",
+      "preReq": [19],
+      "clicado": false
+    }
+  ],
+  [
+    {
+      "id": 27,
+      "nome": "Física Teórica III",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 28,
+      "nome": "Resistência dos Materiais",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 29,
+      "nome": "Pesquisa Operacional I",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 30,
+      "nome": "Engenharia de Métodos",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 31,
+      "nome": "Segurança do Trabalho",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 32,
+      "nome": "Análise de Investimentos",
+      "preReq": [26],
+      "clicado": false
+    },
+    {
+      "id": 33,
+      "nome": "Eletiva I",
+      "preReq": null,
+      "clicado": false
+    }
+  ],
+  [
+    {
+      "id": 34,
+      "nome": "Eletrotécnica",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 35,
+      "nome": "Logística",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 36,
+      "nome": "Planejamento e Controle da Produção I",
+      "preReq": [19],
+      "clicado": false
+    },
+    {
+      "id": 37,
+      "nome": "Gestão da Qualidade",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 38,
+      "nome": "Ergonomia",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 39,
+      "nome": "Pesquisa Operacional II",
+      "preReq": [29],
+      "clicado": false
+    },
+    {
+      "id": 40,
+      "nome": "Optativa I",
+      "preReq": null,
+      "clicado": false
+    }
+  ],
+  [
+    {
+      "id": 41,
+      "nome": "Planejamento e Controle da Produção II",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 42,
+      "nome": "Gestão Ambiental",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 43,
+      "nome": "Engenharia do Produto",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 44,
+      "nome": "Simulação de Processos Produtivos",
+      "preReq": [18],
+      "clicado": false
+    },
+    {
+      "id": 45,
+      "nome": "Logística de Suprimentos",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 46,
+      "nome": "Optativa II",
+      "preReq": null,
+      "clicado": false
+    }
+  ],
+  [
+    {
+      "id": 47,
+      "nome": "Processos Industriais",
+      "preReq": [4, 5],
+      "clicado": false
+    },
+    {
+      "id": 48,
+      "nome": "Avaliação do Desempenho Organizacional",
+      "preReq": [26],
+      "clicado": false
+    },
+    {
+      "id": 49,
+      "nome": "Projeto de Fábrica",
+      "preReq": [11, 36],
+      "clicado": false
+    },
+    {
+      "id": 50,
+      "nome": "Gestão de Serviços",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 51,
+      "nome": "Eletiva II",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 52,
+      "nome": "Logística de Distribuição",
+      "preReq": null,
+      "clicado": false
+    }
+  ],
+  [
+    {
+      "id": 53,
+      "nome": "Inovação e Informação",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 54,
+      "nome": "Controle Estatístico de Qualidade",
+      "preReq": [26],
+      "clicado": false
+    },
+    {
+      "id": 55,
+      "nome": "Gestão de Projetos",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 56,
+      "nome": "Empreendedorismo",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 57,
+      "nome": "Projeto de TCC",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 58,
+      "nome": "Núcleo Temático",
+      "preReq": null,
+      "clicado": false
+    }
+  ],
+  [
+    {
+      "id": 59,
+      "nome": "Trabalho de Conclusão de Curso (TCC)",
+      "preReq": null,
+      "clicado": false
+    },
+    {
+      "id": 60,
+      "nome": "Estágio Curricular",
+      "preReq": null,
+      "clicado": false
+    }
+  ]
+]
