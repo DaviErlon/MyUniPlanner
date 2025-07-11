@@ -16,8 +16,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  window_manager: ^0.3.4
-
   # Ícones no estilo iOS (opcional)
   cupertino_icons: ^1.0.8
 

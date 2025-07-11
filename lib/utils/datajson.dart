@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:myuniplanner/utils/close.dart';
-import 'package:myuniplanner/models/grade.dart';
+import 'package:myuniplanner/models/grid.dart';
 
 String _searchFile(String curso){
   

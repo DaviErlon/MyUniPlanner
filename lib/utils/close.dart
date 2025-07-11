@@ -1,5 +1,5 @@
-import 'package:window_manager/window_manager.dart';
+import 'dart:io';
 
 void closeProgram() async {
-  await windowManager.close();
+  exit(1);
 }
