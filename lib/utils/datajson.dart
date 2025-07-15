@@ -30,5 +30,5 @@ Future<Grade> readData({required String curso}) async {
     String jsonString = await rootBundle.loadString(_searchFile(curso));
     List<dynamic> lista = json.decode(jsonString);
     return Grade(curso, lista);
-
+    
 }

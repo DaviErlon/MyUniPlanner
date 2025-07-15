@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  
+  const MyApp({super.key}); // linha desnecessaria, mas válida para manter um padrão de código 
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +26,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
+
   late AnimationController _controller;
   late Animation<double> _widthAnimation;
   late Animation<double> _opacityAnimation;
@@ -82,18 +83,17 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Adicionamos uma cor de fundo ao Scaffold para que o padding seja visível
+      // cor de fundo para o padding nao ser uma coisa branca feia
       backgroundColor: const Color(0xff181818),
       body: Stack(
         children: [
-          // CAMADA DE BAIXO: O conteúdo da página.
+          // CAMADA DE BAIXO: páginas.
           Padding(
-            // O padding da página principal precisa considerar o padding da sidebar também
-            padding: EdgeInsets.only(left: _minWidth + 30.0),
+            padding: EdgeInsets.only(left: _minWidth + 30.0), // padding que respeite a sidebar fechada
             child: _pages[_selectedIndex],
           ),
 
-          // CAMADA DE CIMA: A sidebar animada, agora com padding geral.
+          // CAMADA DE CIMA (sobreposição): sidebar.
           Padding(
             padding: const EdgeInsets.all(30.0),
             child: MouseRegion(
@@ -143,7 +143,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           _selectedIndex = index;
         });
       },
-      // Desabilitando o splash para um visual mais limpo com o InkWell
+      // Desabilitando o splash para um visual mais limpo
       splashColor: Colors.transparent,
       highlightColor: Colors.white10,
       child: Padding(
@@ -167,7 +167,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                     style: TextStyle(
                       color: color,
                       fontSize: 16,
-                      fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
                     ),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
