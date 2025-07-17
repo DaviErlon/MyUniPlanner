@@ -40,7 +40,10 @@ migrate_working_dir/
 /android
 /windows
 .analysis_options.yaml
-
+.metadata
+.vs
+analysis_options.yaml
+pubspec.lock
 
 # Symbolication related
 app.*.symbols
