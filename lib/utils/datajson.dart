@@ -1,34 +1,37 @@
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:myuniplanner/utils/close.dart';
-import 'package:myuniplanner/models/grid.dart';
+import 'package:window_manager/window_manager.dart';
 
-String _searchFile(String curso){
-  
-  String retorno = 'assets/data/';
-  switch(curso){
-    case 'CC':
-      retorno += 'grcc.json';
-      break;
-    case 'ENGP':
-      retorno += 'grengp.json';
-      break;
-    case 'NCC':
-      retorno += 'grncc.json';
-      break;
-    default:
-      closeProgram();
-      break;
-  }
-
-  return retorno;
+enum Data {
+  cc,
+  ncc,
+  engp,
+  dcc,
+  dncc,
+  dengp
 }
 
-//metodo assincrono pois ler arquivos é uma função bloqueante
-Future<Grade> readData({required String curso}) async {
+void closeProgram() async {
+  await windowManager.close();
+}
 
-    String jsonString = await rootBundle.loadString(_searchFile(curso));
-    List<dynamic> lista = json.decode(jsonString);
-    return Grade(curso, lista);
-    
+String _encontrarArquivos(Data curso){
+  return switch (curso) {
+    Data.cc => 'assets/data/grcc.json',
+    Data.ncc => 'assets/data/grncc.json',
+    Data.engp => 'assets/data/grengp.json',
+    Data.dcc => 'memory/datagrcc.json',
+    Data.dncc => 'memory/datagrncc.json',
+    Data.dengp => 'memory/datagrengp.json',
+  };
+}
+
+Future<List<dynamic>> lerDados({required Data curso}) async {
+  String jsonString = await rootBundle.loadString(_encontrarArquivos(curso));
+  List<dynamic> lista = json.decode(jsonString);
+  return lista;
+}
+
+void salvarDados({required List<dynamic> arquivo}){
+
 }

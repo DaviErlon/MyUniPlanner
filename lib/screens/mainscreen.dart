@@ -1,8 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:myuniplanner/widgets/botoes.dart';
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   
-  const MyApp({super.key}); // linha desnecessaria, mas válida para manter um padrão de código 
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp>{
+
+  int temaSelecionado = 0;
+
+  //adcionar botões de tema
+  List<ThemeData> temas = [
+    ThemeData(
+
+    ),
+    ThemeData(
+
+    ),
+    ThemeData(
+
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +40,7 @@ class MyApp extends StatelessWidget {
       home: const Home(),
     );
   }
-}
+} 
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -46,7 +70,31 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     Container(
       color: Colors.transparent, // Cor transparente para ver o fundo do Scaffold
       child: const Center(
-        child: Text("Página Grades", style: TextStyle(fontSize: 24, color: Colors.white)),
+        child: Text("Página Planejamento", style: TextStyle(fontSize: 24, color: Colors.white)),
+      ),
+    ),
+    Container(
+      color: Colors.transparent, // Cor transparente para ver o fundo do Scaffold
+      child: const Center(
+        child: Text("Página Grade", style: TextStyle(fontSize: 24, color: Colors.white)),
+      ),
+    ),
+    Container(
+      color: Colors.transparent, // Cor transparente para ver o fundo do Scaffold
+      child: const Center(
+        child: Text("Página CCOMP", style: TextStyle(fontSize: 24, color: Colors.white)),
+      ),
+    ),
+    Container(
+      color: Colors.transparent, // Cor transparente para ver o fundo do Scaffold
+      child: const Center(
+        child: Text("Página (nova) CCOMP", style: TextStyle(fontSize: 24, color: Colors.white)),
+      ),
+    ),
+    Container(
+      color: Colors.transparent, // Cor transparente para ver o fundo do Scaffold
+      child: const Center(
+        child: Text("Página ENGPROD", style: TextStyle(fontSize: 24, color: Colors.white)),
       ),
     ),
   ];
@@ -86,10 +134,11 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       // cor de fundo para o padding nao ser uma coisa branca feia
       backgroundColor: const Color(0xff181818),
       body: Stack(
+        alignment: Alignment.centerLeft,
         children: [
           // CAMADA DE BAIXO: páginas.
           Padding(
-            padding: EdgeInsets.only(left: _minWidth + 30.0), // padding que respeite a sidebar fechada
+            padding: EdgeInsets.only(left: _minWidth + 60.0),
             child: _pages[_selectedIndex],
           ),
 
@@ -103,11 +152,12 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 animation: _controller,
                 builder: (context, child) {
                   return Container(
+                    height: 600,
                     width: _widthAnimation.value,
-                    clipBehavior: Clip.antiAlias, // Garante que o conteúdo respeite as bordas
+                    clipBehavior: Clip.antiAlias,
                     decoration: BoxDecoration(
                       color: const Color(0xFF22272B),
-                      borderRadius: BorderRadius.circular(30.0), // Bordas arredondadas
+                      borderRadius: BorderRadius.circular(30.0),
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.black38,
@@ -115,12 +165,68 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         ),
                       ],
                     ),
-                    child: ListView(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const SizedBox(height: 20),
-                        _buildSidebarItem(Icons.home, "Início", 0),
-                        const Divider(),
-                        _buildSidebarItem(Icons.grid_view, "Grades", 1),
+                        Column(
+                          children: [
+                            const SizedBox(height: 20),
+                            SideBarItem(
+                              icon: Icons.home, 
+                              texto: "Início",
+                              isSelected: 0 == _selectedIndex,
+                              acao: (){
+                                setState(() {
+                                  _selectedIndex = 0;
+                                });
+                              },
+                              widthAnimation: _widthAnimation,
+                              opacityAnimation: _opacityAnimation
+                            ),
+                            const Divider(),
+                            SideBarItem( 
+                              icon: Icons.event, 
+                              texto: "Planejar Horários",
+                              isSelected: 1 == _selectedIndex,
+                              acao: (){
+                                setState(() {
+                                  _selectedIndex = 1;
+                                });
+                              },
+                              widthAnimation: _widthAnimation,
+                              opacityAnimation: _opacityAnimation
+                            ),
+                            SideBarItem(
+                              icon: Icons.grid_view, 
+                              texto: "Grades",
+                              isSelected: 2 == _selectedIndex,
+                              acao: (){
+                                setState(() {
+                                  _selectedIndex = 2;
+                                });
+                              },
+                              widthAnimation: _widthAnimation,
+                              opacityAnimation: _opacityAnimation
+                            ),
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            SideBarItem(
+                              icon: FontAwesomeIcons.github, 
+                              texto: "Repositório", 
+                              acao: () async {
+                                final Uri url = Uri.parse('https://github.com/DaviErlon/MyUniPlanner');
+                                await launchUrl(url);
+                              }, 
+                              isSelected: false,
+                              widthAnimation: _widthAnimation, 
+                              opacityAnimation: _opacityAnimation
+                            ),
+                            const SizedBox(height: 20),
+                          ],
+                        )
                       ],
                     ),
                   );
@@ -129,52 +235,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             ),
           ),
         ],
-      ),
-    );
-  }
-
-  Widget _buildSidebarItem(IconData icon, String title, int index) {
-    final bool isSelected = _selectedIndex == index;
-    final color = isSelected ? Theme.of(context).primaryColorLight : Colors.white70;
-
-    return InkWell(
-      onTap: () {
-        setState(() {
-          _selectedIndex = index;
-        });
-      },
-      // Desabilitando o splash para um visual mais limpo
-      splashColor: Colors.transparent,
-      highlightColor: Colors.white10,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 12.0),
-        child: Row(
-          children: [
-            SizedBox(
-              width: _minWidth,
-              child: Icon(
-                icon,
-                color: color,
-                size: 24,
-              ),
-            ),
-            if (_widthAnimation.value > _minWidth + 20)
-              Expanded(
-                child: Opacity(
-                  opacity: _opacityAnimation.value,
-                  child: Text(
-                    title,
-                    style: TextStyle(
-                      color: color,
-                      fontSize: 16,
-                    ),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ),
-          ],
-        ),
       ),
     );
   }
