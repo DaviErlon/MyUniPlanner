@@ -1,268 +1,268 @@
 [
-  [
-    {
-      "id": 1,
+  {
+    "1": {
       "nome": "Introdução à Ciência da Computação",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 2,
+    "2": {
       "nome": "Introdução à Programação",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 3,
+    "3": {
       "nome": "Cálculo I",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 4,
+    "4": {
       "nome": "Geometria Analítica",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 5,
+    "5": {
       "nome": "Matemática Discreta",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 6,
+    "6": {
       "nome": "Metodologia Científica",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     }
-  ],
-  [
-    {
-      "id": 7,
+  },
+  {
+    "7": {
       "nome": "Paradigmas de Linguagens de Programação",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 8,
+    "8": {
       "nome": "Sistemas de Informação",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 9,
+    "9": {
       "nome": "Cálculo II",
-      "preReq": [3]
+      "preReq": [3],
+      "clicado": false
     },
-    {
-      "id": 10,
+    "10": {
       "nome": "Física I",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 11,
+    "11": {
       "nome": "Álgebra Linear",
-      "preReq": [4]
+      "preReq": [4],
+      "clicado": false
     },
-    {
-      "id": 12,
+    "12": {
       "nome": "Lógica",
-      "preReq": [5]
+      "preReq": [5],
+      "clicado": false
     },
-    {
-      "id": 13,
+    "13": {
       "nome": "Administração",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     }
-  ],
-  [
-    {
-      "id": 14,
+  },
+  {
+    "14": {
       "nome": "Algoritmos e Estruturas de Dados I",
-      "preReq": [2]
+      "preReq": [2],
+      "clicado": false
     },
-    {
-      "id": 15,
+    "15": {
       "nome": "Programação Orientada a Objetos",
-      "preReq": [2]
+      "preReq": [2],
+      "clicado": false
     },
-    {
-      "id": 16,
+    "16": {
       "nome": "Banco de Dados I",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 17,
+    "17": {
       "nome": "Física II",
-      "preReq": [10]
+      "preReq": [10],
+      "clicado": false
     },
-    {
-      "id": 18,
+    "18": {
       "nome": "Estatística Básica",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 19,
+    "19": {
       "nome": "Circuitos Digitais",
-      "preReq": [1, 12]
+      "preReq": [1, 12],
+      "clicado": false
     },
-    {
-      "id": 20,
+    "20": {
       "nome": "Planejamento e Gestão",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     }
-  ],
-  [
-    {
-      "id": 21,
+  },
+  {
+    "21": {
       "nome": "Algoritmos e Estruturas de Dados II",
-      "preReq": [14]
+      "preReq": [14],
+      "clicado": false
     },
-    {
-      "id": 22,
+    "22": {
       "nome": "Redes de Computadores",
-      "preReq": [1]
+      "preReq": [1],
+      "clicado": false
     },
-    {
-      "id": 23,
+    "23": {
       "nome": "Banco de Dados II",
-      "preReq": [16]
+      "preReq": [16],
+      "clicado": false
     },
-    {
-      "id": 24,
+    "24": {
       "nome": "Análise de Algoritmos",
-      "preReq": [3, 12, 14]
+      "preReq": [3, 12, 14],
+      "clicado": false
     },
-    {
-      "id": 25,
+    "25": {
       "nome": "Linguagens Formais e Autômatos",
-      "preReq": [5]
+      "preReq": [5],
+      "clicado": false
     },
-    {
-      "id": 26,
+    "26": {
       "nome": "Arquitetura de Computadores",
-      "preReq": [19]
+      "preReq": [19],
+      "clicado": false
     },
-    {
-      "id": 27,
+    "27": {
       "nome": "Empreendedorismo",
-      "preReq": [13]
+      "preReq": [13],
+      "clicado": false
     }
-  ],
-  [
-    {
-      "id": 28,
+  },
+  {
+    "28": {
       "nome": "Inteligência Artificial",
-      "preReq": [12]
+      "preReq": [12],
+      "clicado": false
     },
-    {
-      "id": 29,
+    "29": {
       "nome": "Construção de Compiladores",
-      "preReq": [25]
+      "preReq": [25],
+      "clicado": false
     },
-    {
-      "id": 30,
+    "30": {
       "nome": "Computabilidade e Decidibilidade",
-      "preReq": [12, 25]
+      "preReq": [12, 25],
+      "clicado": false
     },
-    {
-      "id": 31,
+    "31": {
       "nome": "Desenvolvimento de Negócios",
-      "preReq": [27]
+      "preReq": [27],
+      "clicado": false
     },
-    {
-      "id": 32,
+    "32": {
       "nome": "Sistemas Operacionais",
-      "preReq": [26]
+      "preReq": [26],
+      "clicado": false
     },
-    {
-      "id": 33,
+    "33": {
       "nome": "Núcleo Temático",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     }
-  ],
-  [
-    {
-      "id": 34,
+  },
+  {
+    "34": {
       "nome": "Ciência de Dados",
-      "preReq": [18, 28]
+      "preReq": [18, 28],
+      "clicado": false
     },
-    {
-      "id": 35,
+    "35": {
       "nome": "Engenharia de Software",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 36,
+    "36": {
       "nome": "Sistemas Distribuídos",
-      "preReq": [22, 32]
+      "preReq": [22, 32],
+      "clicado": false
     },
-    {
-      "id": 37,
+    "37": {
       "nome": "Eletiva I",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 38,
+    "38": {
       "nome": "Eletiva II",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 39,
+    "39": {
       "nome": "Optativa I",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 40,
+    "40": {
       "nome": "Optativa II",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     }
-  ],
-  [
-    {
-      "id": 41,
+  },
+  {
+    "41": {
       "nome": "Trabalho de Conclusão de Curso",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 42,
+    "42": {
       "nome": "Projeto de Sistemas Computacionais",
-      "preReq": [23, 15, 35]
+      "preReq": [23, 15, 35],
+      "clicado": false
     },
-    {
-      "id": 43,
+    "43": {
       "nome": "Interação Homem Computador",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 44,
+    "44": {
       "nome": "Optativa III",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 45,
+    "45": {
       "nome": "Optativa IV",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 46,
+    "46": {
       "nome": "Optativa V",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 47,
+    "47": {
       "nome": "Eletiva III",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     }
-  ],
-  [
-    {
-      "id": 48,
+  },
+  {
+    "48": {
       "nome": "Trabalho de Conclusão de Curso II",
-      "preReq": [41]
+      "preReq": [41],
+      "clicado": false
     },
-    {
-      "id": 49,
+    "49": {
       "nome": "Estágio Supervisionado",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     },
-    {
-      "id": 50,
+    "50": {
       "nome": "Atividades Complementares",
-      "preReq": null
+      "preReq": null,
+      "clicado": false
     }
-  ]
+  }
 ]

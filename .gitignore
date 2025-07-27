@@ -44,6 +44,7 @@ migrate_working_dir/
 .vs
 analysis_options.yaml
 pubspec.lock
+/memory
 
 # Symbolication related
 app.*.symbols

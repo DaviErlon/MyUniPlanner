@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:myuniplanner/screens/grid.dart';
+import 'package:myuniplanner/utils/datajson.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:myuniplanner/widgets/botoes.dart';
 
@@ -51,6 +53,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
 
+  // variaveis para a construção da sidebar
+
   late AnimationController _controller;
   late Animation<double> _widthAnimation;
   late Animation<double> _opacityAnimation;
@@ -58,41 +62,42 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   final double _minWidth = 80.0;
   final double _maxWidth = 250.0;
 
-  int _selectedIndex = 0;
+  //paginas de navegação
 
+  int _selectedIndex = 0;
   final List<Widget> _pages = [
     Container(
-      color: Colors.transparent, // Cor transparente para ver o fundo do Scaffold
+      color: Colors.transparent,
       child: const Center(
         child: Text("Página Início", style: TextStyle(fontSize: 24, color: Colors.white)),
       ),
     ),
     Container(
-      color: Colors.transparent, // Cor transparente para ver o fundo do Scaffold
+      color: Colors.transparent,
       child: const Center(
         child: Text("Página Planejamento", style: TextStyle(fontSize: 24, color: Colors.white)),
       ),
     ),
     Container(
-      color: Colors.transparent, // Cor transparente para ver o fundo do Scaffold
+      color: Colors.transparent, // Teste para a grade de CC
       child: const Center(
-        child: Text("Página Grade", style: TextStyle(fontSize: 24, color: Colors.white)),
+        child: Grade(curso: Curso.cc),
       ),
     ),
     Container(
-      color: Colors.transparent, // Cor transparente para ver o fundo do Scaffold
+      color: Colors.transparent,
       child: const Center(
         child: Text("Página CCOMP", style: TextStyle(fontSize: 24, color: Colors.white)),
       ),
     ),
     Container(
-      color: Colors.transparent, // Cor transparente para ver o fundo do Scaffold
+      color: Colors.transparent,
       child: const Center(
         child: Text("Página (nova) CCOMP", style: TextStyle(fontSize: 24, color: Colors.white)),
       ),
     ),
     Container(
-      color: Colors.transparent, // Cor transparente para ver o fundo do Scaffold
+      color: Colors.transparent,
       child: const Center(
         child: Text("Página ENGPROD", style: TextStyle(fontSize: 24, color: Colors.white)),
       ),
@@ -139,7 +144,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           // CAMADA DE BAIXO: páginas.
           Padding(
             padding: EdgeInsets.only(left: _minWidth + 60.0),
-            child: _pages[_selectedIndex],
+            child: IndexedStack( // IndexedStack é de extrema importancia para otimização da mémoria das páginas
+              index: _selectedIndex,
+              children: _pages,
+            ),
           ),
 
           // CAMADA DE CIMA (sobreposição): sidebar.

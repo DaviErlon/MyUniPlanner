@@ -8,7 +8,7 @@ void main() async {
   await windowManager.ensureInitialized();
 
   windowManager.waitUntilReadyToShow().then((_) async {
-    await windowManager.setMinimumSize(const Size(800, 600));
+    await windowManager.setMinimumSize(const Size(800, 500));
     await windowManager.show();
   });
 

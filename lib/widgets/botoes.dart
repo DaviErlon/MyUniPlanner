@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
 
 enum Estado {
-  pago,
-  psr,  // pode ser cursado
-  npsr, // nao pode ser cursado
+  indisponivel,
+  disponivel,
+  concluido,
 }
 
 const List<Color> _cores = [
-  Color.fromARGB(255, 108, 55, 155),
-  Color.fromARGB(255, 112, 101, 178),
   Color.fromARGB(255, 159, 158, 158),
+  Color.fromARGB(255, 112, 101, 178),
+  Color.fromARGB(255, 108, 55, 155),
 ];
 
 class Cadeira extends StatelessWidget {
-  
+  final int index;
   final String texto;
   final Estado estado;
   final VoidCallback? onPressed;
 
   const Cadeira({
     super.key,
+    required this.index,
     required this.texto,
     required this.estado,
     this.onPressed,
@@ -27,25 +28,41 @@ class Cadeira extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 75,
-      height: 45,
-      child: ElevatedButton(
-        onPressed: onPressed,
-        style: ElevatedButton.styleFrom(
-          backgroundColor: _cores[estado.index],
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10),
+    return Padding(
+      padding: EdgeInsets.all(3),
+
+      child: SizedBox(
+        width: 125,
+        height: 75,
+        child: ElevatedButton(
+          onPressed: onPressed,
+          style: ButtonStyle(
+                padding: WidgetStateProperty.all(const EdgeInsets.symmetric(horizontal: 8.0, vertical: 0)),
+            backgroundColor: WidgetStateProperty.resolveWith((states) {
+              if (states.contains(WidgetState.hovered)) {
+                return _cores[estado.index].withAlpha(230);
+              }
+              return _cores[estado.index];
+            }),
+            elevation: WidgetStateProperty.all(2),
+            shape: WidgetStateProperty.all(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+            shadowColor: WidgetStateProperty.all(Colors.black26),
           ),
-          padding: EdgeInsets.zero,
-        ),
-        child: Text(
-          texto,
-          style: const TextStyle(
-            fontSize: 14,
-            color: Colors.black12, // cor do texto (pode ser opcional também)
+          child: Text(
+            texto,
+            style: const TextStyle(
+              fontSize: 12,
+              color: Colors.black87,
+            ),
+            textAlign: TextAlign.center,
+            softWrap: true,
+            maxLines: 4,
+            overflow: TextOverflow.ellipsis,
           ),
-          textAlign: TextAlign.center,
         ),
       ),
     );
@@ -112,20 +129,26 @@ class _ItemState extends State<SideBarItem> {
             children: [
               SizedBox(
                 width: 80.0,
-                child: Icon(widget.icon, color: color, size: 24),
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 200),
+                  child: Icon(widget.icon, color: color, size: 24),
+                ),
               ),
               if (widget.widthAnimation.value > 100.0)
                 Expanded(
                   child: Opacity(
                     opacity: widget.opacityAnimation.value,
-                    child: Text(
-                      widget.texto,
+                    child: AnimatedDefaultTextStyle(
+                      duration: const Duration(milliseconds: 200),
                       style: TextStyle(
                         color: color,
                         fontSize: 16,
                       ),
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
+                      child: Text(
+                        widget.texto,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
                     ),
                   ),
                 ),
