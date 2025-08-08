@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:window_manager/window_manager.dart';
-import 'package:myuniplanner/screens/mainscreen.dart';
+import 'package:myuniplanner/pages/mainscreen.dart';
+import 'package:myuniplanner/providers/providers.dart';
 
 void main() async {
 
@@ -12,6 +14,14 @@ void main() async {
     await windowManager.show();
   });
 
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => Telas()),
+        ChangeNotifierProvider(create: (_) => Temas()),
+      ],
+      child: MyApp(),
+    ),
+  );
 }
 

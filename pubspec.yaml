@@ -22,6 +22,8 @@ dependencies:
   
   url_launcher: ^6.2.5
 
+  provider: ^6.1.5
+
   # Ícones no estilo iOS (opcional)
   cupertino_icons: ^1.0.8
 

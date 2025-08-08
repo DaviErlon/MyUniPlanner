@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:window_manager/window_manager.dart';
 
 enum Curso {
   cc,
@@ -22,7 +21,7 @@ Future<List<Map<int, dynamic>>> carregarCurso({required Curso curso}) async {
   final File file = File(memoryPath);
   String jsonString;
 
-  if (await file.exists()) {
+  if (await file.exists() && (await file.length() > 0)) {
     jsonString = await file.readAsString();
 
     return (json.decode(jsonString) as List)
@@ -96,8 +95,4 @@ Future<void> salvarMemoria({required List<Map<int, dynamic>> dados, required Cur
 
   await arquivo.create(recursive: true);
   await arquivo.writeAsString(jsonString);
-}
-
-void closeProgram() async {
-  await windowManager.close();
 }

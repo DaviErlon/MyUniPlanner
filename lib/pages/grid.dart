@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:myuniplanner/widgets/botoes.dart';
 import 'package:myuniplanner/utils/datajson.dart';
 import 'package:flutter/material.dart';
@@ -18,24 +19,42 @@ class _GradeState extends State<Grade> with WindowListener {
   late List<Map<int, dynamic>> memoriaExterna;
   late final int qntPeriodos;
   bool _carregando = true;
+  Timer? _autoSaveTimer;
 
   @override
   void initState() {
     super.initState();
     windowManager.addListener(this);
+    _iniciarAutoSave();
     _carregarDados();
   }
 
   @override
   void dispose() {
+    _cancelarAutoSave();
     windowManager.removeListener(this);
     super.dispose();
   }
 
+  void _iniciarAutoSave() {
+    _autoSaveTimer = Timer.periodic(const Duration(seconds: 10), (timer) {
+      _salvarDados();
+    });
+  }
+
+  void _cancelarAutoSave() {
+    _autoSaveTimer?.cancel();
+    _autoSaveTimer = null;
+  }
+
   @override
-  void onWindowClose() async {
-    await _salvarDados();
-    await windowManager.destroy();
+  void onWindowBlur() {
+    _salvarDados();
+  }
+
+  @override
+  void onWindowMinimize() {
+    _salvarDados();
   }
 
   Future<void> _carregarDados() async {
